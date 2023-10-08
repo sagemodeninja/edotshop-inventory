@@ -3,7 +3,10 @@
 namespace EdotShop.Contracts.Inventory.Enums;
 
 [JsonConverter(typeof(JsonStringEnumConverter))]
-public enum TransactionStatus
+public enum SaleStatus
 {
-
+    Created,
+    Pending,
+    Completed,
+    Inactive
 }

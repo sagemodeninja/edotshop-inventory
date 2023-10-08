@@ -20,5 +20,5 @@ public interface ISale : IBaseEntity
 
     public string? Remarks { get; }
 
-    public TransactionStatus Status { get; }
+    public SaleStatus Status { get; }
 }

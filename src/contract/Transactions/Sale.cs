@@ -42,5 +42,5 @@ public class Sale : ISale
     [MaxLength(200)]
     public string? Remarks { get; set; }
 
-    public TransactionStatus Status { get; set; }
+    public SaleStatus Status { get; set; }
 }
