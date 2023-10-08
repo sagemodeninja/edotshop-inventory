@@ -1,0 +1,39 @@
+﻿using EdotShop.Contracts.Inventory.Enums;
+using EdotShop.Contracts.Inventory.Interfaces;
+
+namespace EdotShop.Contracts.Inventory;
+
+public class Inventory : IInventory
+{
+    public long Id { get; set; }
+
+    public Guid ObjectId { get; set; }
+
+    public string Code { get; set; }
+
+    public string Description { get; set; }
+
+    public string Model { get; set; }
+
+    public Guid PartId { get; set; }
+
+    public Part? Part { get; set; }
+
+    public string PartNumber { get; set; }
+
+    public Guid ManufacturerId { get; set; }
+
+    public Manufacturer? Manufacturer { get; set; }
+
+    public bool IsOriginal { get; set; }
+
+    public DateTime CreatedOn { get; set; }
+
+    public DateTime UpdatedOn { get; set; }
+
+    public List<InventoryItem>? Items { get; set; }
+
+    public string? Remarks { get; set; }
+
+    public GenericEntityStatus Status { get; set; }
+}

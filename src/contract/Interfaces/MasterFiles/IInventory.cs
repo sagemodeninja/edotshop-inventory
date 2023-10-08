@@ -2,13 +2,13 @@
 
 public interface IInventory : IBasicEntity
 {
-    public Guid PartId { get; set; }
+    public Guid PartId { get; }
 
-    public Guid ManufacturerId { get; set; }
+    public string PartNumber { get; }
 
-    public string PartNumber { get; set; }
+    public Guid ManufacturerId { get; }
 
-    public string Model { get; set; }
+    public string Model { get; }
     
-    public bool IsOriginal { get; set; }
+    public bool IsOriginal { get; }
 }

@@ -2,17 +2,23 @@
 
 namespace EdotShop.Contracts.Inventory.Interfaces;
 
-public interface ITransaction : IBasicEntity
+public interface ITransaction : IBaseEntity
 {
-    public DateTime Timestamp { get; set; }
+    public string Code { get; }
 
-    public string Customer { get; set; }
+    public string Description { get; }
 
-    public decimal Amount { get; set; }
+    public DateTime Timestamp { get; }
 
-    public decimal Markup { get; set; }
+    public string Customer { get; }
 
-    public decimal Total { get; set; }
+    public decimal Amount { get; }
 
-    public new TransactionStatus Status { get; set; }
+    public decimal Markup { get; }
+
+    public decimal Total { get; }
+
+    public string? Remarks { get; }
+
+    public TransactionStatus Status { get; }
 }

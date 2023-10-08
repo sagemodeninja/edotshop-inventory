@@ -2,7 +2,7 @@
 
 public interface IPart : IBasicEntity
 {
-    public Guid ClassificationId { get; set; }
+    public Guid ClassificationId { get; }
 
-    public Guid UnitId { get; set; }
+    public Guid UnitId { get; }
 }

@@ -2,9 +2,9 @@
 
 public interface IInventoryItem : IBasicEntity
 {
-    public Guid InventoryId { get; set; }
+    public Guid InventoryId { get; }
 
-    public Guid SupplierId { get; set; }
+    public Guid SupplierId { get; }
 
-    public decimal Price { get; set; }
+    public decimal Price { get; }
 }
