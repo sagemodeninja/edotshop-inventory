@@ -20,4 +20,8 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.15" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\contract\contract.csproj" />
+  </ItemGroup>
+
 </Project>
