@@ -5,8 +5,8 @@ using EdotShop.Contracts.Inventory.Interfaces;
 
 namespace EdotShop.Contracts.Inventory;
 
-[Table("Inventories")]
-public class Inventory : IInventory
+[Table("Sales")]
+public class Sale : ISale
 {
     public long Id { get; set; }
 
@@ -19,30 +19,28 @@ public class Inventory : IInventory
     [MaxLength(200)]
     public string Description { get; set; }
 
-    [MaxLength(200)]
-    public string Model { get; set; }
+    public DateTime Timestamp { get; set; }
 
-    public Guid PartId { get; set; }
+    [MaxLength(180)]
+    public string Customer { get; set; }
 
-    public Part? Part { get; set; }
+    [Column(TypeName = "decimal(18, 2)")]
+    public decimal Amount { get; set; }
 
-    [MaxLength(120)]
-    public string PartNumber { get; set; }
+    [Column(TypeName = "decimal(18, 2)")]
+    public decimal Markup { get; set; }
 
-    public Guid ManufacturerId { get; set; }
-
-    public Manufacturer? Manufacturer { get; set; }
-
-    public bool IsOriginal { get; set; }
+    [Column(TypeName = "decimal(18, 2)")]
+    public decimal Total { get; set; }
 
     public DateTime CreatedOn { get; set; }
 
     public DateTime UpdatedOn { get; set; }
 
-    public List<InventoryItem>? Items { get; set; }
+    public List<SaleItem>? SaleItems { get; set; }
 
     [MaxLength(200)]
     public string? Remarks { get; set; }
 
-    public GenericEntityStatus Status { get; set; }
+    public TransactionStatus Status { get; set; }
 }

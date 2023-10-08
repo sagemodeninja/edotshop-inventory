@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 
-namespace EdotShop.Services.Inventory.Classes;
+namespace EdotShop.InventoryServices.Classes;
 
 /// <summary>
 /// Sets swagger default values. 

@@ -1,17 +1,24 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using EdotShop.Contracts.Inventory.Enums;
-using EdotShop.Contracts.Inventory.Interfaces;
 
 namespace EdotShop.Contracts.Inventory;
 
-[Table("Transactions")]
-public class Transaction : ITransaction
+[Table("SaleItems")]
+public class SaleItem : ISaleItem
 {
     public long Id { get; set; }
 
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
     public Guid ObjectId { get; set; }
+
+    public Guid SaleId { get; set; }
+
+    public Sale? Sale { get; set; }
+
+    public Guid InventoryItemId { get; set; }
+
+    public InventoryItem? InventoryItem { get; set; }
 
     [MaxLength(30)]
     public string Code { get; set; }
@@ -19,16 +26,10 @@ public class Transaction : ITransaction
     [MaxLength(200)]
     public string Description { get; set; }
 
-    public DateTime Timestamp { get; set; }
-
-    [MaxLength(180)]
-    public string Customer { get; set; }
-
     [Column(TypeName = "decimal(18, 2)")]
     public decimal Amount { get; set; }
 
-    [Column(TypeName = "decimal(18, 2)")]
-    public decimal Markup { get; set; }
+    public int Quantity { get; set; }
 
     [Column(TypeName = "decimal(18, 2)")]
     public decimal Total { get; set; }
@@ -40,5 +41,5 @@ public class Transaction : ITransaction
     [MaxLength(200)]
     public string? Remarks { get; set; }
 
-    public TransactionStatus Status { get; set; }
+    public GenericEntityStatus Status { get; set; }
 }

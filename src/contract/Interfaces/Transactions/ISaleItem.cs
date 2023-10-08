@@ -2,8 +2,10 @@
 
 namespace EdotShop.Contracts.Inventory;
 
-public interface ITransactionDetail : IBasicEntity
+public interface ISaleItem : IBasicEntity
 {
+    public Guid SaleId { get; }
+
     public Guid InventoryItemId { get; }
 
     public decimal Amount { get; }

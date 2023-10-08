@@ -1,6 +1,6 @@
 using System.Reflection;
-using EdotShop.Services.Inventory;
-using EdotShop.Services.Inventory.Classes;
+using EdotShop.InventoryServices;
+using EdotShop.InventoryServices.Classes;
 using Microsoft.AspNetCore.OData;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Net.Http.Headers;

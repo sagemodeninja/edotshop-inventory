@@ -2,7 +2,7 @@
 
 namespace EdotShop.Contracts.Inventory.Interfaces;
 
-public interface ITransaction : IBaseEntity
+public interface ISale : IBaseEntity
 {
     public string Code { get; }
 
