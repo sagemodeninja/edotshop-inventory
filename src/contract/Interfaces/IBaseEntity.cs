@@ -1,4 +1,4 @@
-﻿namespace EdotShop.Contracts.Inventory;
+﻿namespace EdotShop.Contracts.Inventory.Interfaces;
 
 public interface IBaseEntity
 {

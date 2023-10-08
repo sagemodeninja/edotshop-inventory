@@ -1,0 +1,81 @@
+Classifications
+- Id
+- Code
+- Description
+- Remarks
+- Status
+
+Units
+- Id
+- Code
+- Description
+- Symbol
+- Remarks
+- Status
+
+Parts
+- Id
+- Code
+- ClassificationId
+- UnitId
+- Description
+- Remarks
+- Status
+
+Manufacturers
+- Id
+- Code
+- Description
+- Remarks
+- Status
+
+Suppliers
+- Id
+- Code
+- Description
+- Address
+- TelephoneNumber
+- MobileNumber
+- EmailAddress
+- Remarks
+- Status
+
+Inventories
+- Id
+- Code (SKU)
+- PartId
+- ManufacturerId
+- PartNumber
+- Description
+- Model
+- IsOriginal
+- Remarks
+- Status
+
+InventoryItems
+- Id
+- Code (Sub SKU)
+- InventoryId
+- SupplierId
+- Price
+- Remarks
+- Status
+
+Transactions
+- Id
+- Code (ReferrenceNo)
+- Timestamp
+- CustomerName
+- BaseAmount
+- MarkupAmount
+- TotalAmount
+- Remarks
+- Status
+
+TransactionDetails
+- Id
+- Code (Not Used/Guid)
+- InventoryItemId
+- Amount
+- Quantity
+- TotalAmount
